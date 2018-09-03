@@ -15,8 +15,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     private List<String> names;
     private int layout;
     private OnItemClickListener itemClickListener;
+    private OnLoadMoreListener onLoadMoreListener;
 
-    public MyAdapter(List<String> names, int layout, OnItemClickListener listener) {
+    public MyAdapter(List<String> names, int layout, OnItemClickListener listener, OnLoadMoreListener loadMoreListener) {
         this.names = names;
         this.layout = layout;
         this.itemClickListener = listener;
@@ -63,5 +64,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     public interface OnItemClickListener {
         void onItemClick(String name, int position);
 
+    }
+
+    public interface OnLoadMoreListener {
+        void onLoadMore();
     }
 }
