@@ -15,10 +15,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private LinearLayoutManager mLayoutManager;
-    private int counter = 0;
-    private int page_number = 1;
 
-    private static int firstVisibleInListView;
+   // private static int firstVisibleInListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

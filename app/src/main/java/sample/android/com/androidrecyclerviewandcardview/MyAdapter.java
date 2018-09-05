@@ -15,7 +15,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     private List<String> names;
     private int layout;
     private OnItemClickListener itemClickListener;
-    private OnLoadMoreListener onLoadMoreListener;
 
     public MyAdapter(List<String> names, int layout, OnItemClickListener listener, OnLoadMoreListener loadMoreListener) {
         this.names = names;
@@ -42,16 +41,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>{
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        public TextView textViewName;
+        public TextView cardText;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
-            this.textViewName = itemView.findViewById(R.id.textViewName);
+            this.cardText = itemView.findViewById(R.id.cardtext);
         }
 
         public void bind(final String name, final OnItemClickListener listener) {
-            this.textViewName.setText(name);
+            this.cardText.setText(name);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
